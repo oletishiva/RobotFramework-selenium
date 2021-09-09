@@ -1,6 +1,6 @@
 # RobotFramework-selenium
-python version 3.9
-Pycharm version:pycharm-community-2021.1.2
+1.python version 3.9
+2. Pycharm version:pycharm-community-2021.1.2
 
 robotframework-seleniumlibrary 5.1.3
 selenium                       3.141.0
