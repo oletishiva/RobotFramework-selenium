@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.7 on win32)" generated="20210908 20:33:41.036" rpa="false" schemaversion="2">
+<suite id="s1" name="SeleniumTest" source="D:\pythonProject\Tests\SeleniumTest.robot">
+<test id="s1-t1" name="Select item and validate cart">
+<kw name="Start TestCase" library="BaseTest" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210908 20:33:41.388" level="INFO">Opening browser 'chrome' to base url 'https://www.powerbuy.co.th/th'.</msg>
+<status status="PASS" starttime="20210908 20:33:41.387" endtime="20210908 20:33:55.544"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210908 20:33:55.544" endtime="20210908 20:33:56.800"/>
+</kw>
+<status status="PASS" starttime="20210908 20:33:41.387" endtime="20210908 20:33:56.800"/>
+</kw>
+<kw name="Search Product" library="SearchFunctionality">
+<arg>TV</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchInputTextbox}</arg>
+<arg>${Keyword}</arg>
+<arg>timeout=20s</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 20:33:56.803" level="INFO">Typing text 'TV' into text field 'id=txt-searchBox-input'.</msg>
+<status status="PASS" starttime="20210908 20:33:56.801" endtime="20210908 20:33:57.888"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20210908 20:33:57.888" endtime="20210908 20:33:58.205"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${SearchItemsButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210908 20:33:58.205" endtime="20210908 20:33:58.577"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SearchItemsButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210908 20:33:58.578" level="INFO">Clicking button 'xpath://*[@id="btn-searchBox-input"][1]'.</msg>
+<status status="PASS" starttime="20210908 20:33:58.577" endtime="20210908 20:33:59.364"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LoadingIndicator}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210908 20:33:59.364" endtime="20210908 20:33:59.397"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lnk-viewBreadcrumb}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20210908 20:34:04.050" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20210908 20:33:59.397" endtime="20210908 20:34:04.356"/>
+</kw>
+<status status="PASS" starttime="20210908 20:33:56.800" endtime="20210908 20:34:04.356"/>
+</kw>
+<kw name="Filter Product" library="SearchFunctionality">
+<arg>${44-55INCHES}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ProductItesmsFilter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:04.357" endtime="20210908 20:34:04.468"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210908 20:34:04.468" endtime="20210908 20:34:05.304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:05.304" endtime="20210908 20:34:05.982"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210908 20:34:05.982" endtime="20210908 20:34:06.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:06.230" level="INFO">Clicking element '//*[text()='44 - 55 นิ้ว']/ancestor::div[@class="Row__Wrapper-v6uxgu-0 kSLyDU"][1]//*[@data-testid='btn-checkbox']'.</msg>
+<status status="PASS" starttime="20210908 20:34:06.229" endtime="20210908 20:34:07.102"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LoadingIndicator}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210908 20:34:07.103" endtime="20210908 20:34:13.090"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:04.356" endtime="20210908 20:34:13.090"/>
+</kw>
+<kw name="Add First Item Into The Cart" library="SearchFunctionality">
+<arg>${FirstItemFromReturnList}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${item}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:13.092" endtime="20210908 20:34:13.176"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210908 20:34:13.177" endtime="20210908 20:34:13.234"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${data-productID}</var>
+<arg>${item}</arg>
+<arg>data-productid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210908 20:34:13.258" level="INFO">${data-productID} = 259286</msg>
+<status status="PASS" starttime="20210908 20:34:13.234" endtime="20210908 20:34:13.259"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>data product id is ${data-productID}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210908 20:34:13.259" level="INFO">data product id is 259286</msg>
+<status status="PASS" starttime="20210908 20:34:13.259" endtime="20210908 20:34:13.259"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:13.260" level="INFO">Clicking element '(//div[@class="ProductGridItem__Label-iQRkAY jLwkyu"]/parent::div/parent::div/parent::div)[1]'.</msg>
+<status status="PASS" starttime="20210908 20:34:13.259" endtime="20210908 20:34:13.942"/>
+</kw>
+<kw name="Add item into cart" library="CartDetails">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:13.944" endtime="20210908 20:34:16.408"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:16.410" level="INFO">Clicking element '//*[@class='Button__StyledButton-r30g8h-0 uwdlB AddToCartButton__AddToCartButtonElem-dtemKR bwuoky']'.</msg>
+<status status="PASS" starttime="20210908 20:34:16.408" endtime="20210908 20:34:16.648"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddItemSuccessMessage}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:16.649" endtime="20210908 20:34:23.968"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:13.943" endtime="20210908 20:34:23.968"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${AddedItemToCart}</arg>
+<arg>${data-productID}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20210908 20:34:23.969" endtime="20210908 20:34:24.068"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>list items is ${AddedItemToCart}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210908 20:34:24.068" level="INFO">list items is ['Create List', '259286']</msg>
+<status status="PASS" starttime="20210908 20:34:24.068" endtime="20210908 20:34:24.069"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:13.090" endtime="20210908 20:34:24.069"/>
+</kw>
+<kw name="Navigate Back To product Section" library="CartDetails">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ProductLink}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:24.069" endtime="20210908 20:34:24.137"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ProductLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:24.138" level="INFO">Clicking element '//*[@id='lnk-viewBreadcrumb-2'][1]'.</msg>
+<status status="PASS" starttime="20210908 20:34:24.137" endtime="20210908 20:34:26.096"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:24.069" endtime="20210908 20:34:26.097"/>
+</kw>
+<kw name="Filter Product" library="SearchFunctionality">
+<arg>${32-43INCHES}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ProductItesmsFilter}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:26.099" endtime="20210908 20:34:29.723"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210908 20:34:29.723" endtime="20210908 20:34:30.542"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:30.542" endtime="20210908 20:34:30.688"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210908 20:34:30.688" endtime="20210908 20:34:31.542"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ScreenSize}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:31.543" level="INFO">Clicking element '//*[text()='32 - 43 นิ้ว']/ancestor::div[@class="Row__Wrapper-v6uxgu-0 kSLyDU"][1]//*[@data-testid='btn-checkbox']'.</msg>
+<status status="PASS" starttime="20210908 20:34:31.542" endtime="20210908 20:34:34.290"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LoadingIndicator}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20210908 20:34:34.290" endtime="20210908 20:34:36.722"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:26.097" endtime="20210908 20:34:36.722"/>
+</kw>
+<kw name="Add First Item Into The Cart" library="SearchFunctionality">
+<arg>${FirstItemFromReturnList}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${item}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:36.723" endtime="20210908 20:34:36.908"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210908 20:34:36.909" endtime="20210908 20:34:37.072"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${data-productID}</var>
+<arg>${item}</arg>
+<arg>data-productid</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20210908 20:34:37.174" level="INFO">${data-productID} = 262249</msg>
+<status status="PASS" starttime="20210908 20:34:37.073" endtime="20210908 20:34:37.174"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>data product id is ${data-productID}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210908 20:34:37.175" level="INFO">data product id is 262249</msg>
+<status status="PASS" starttime="20210908 20:34:37.174" endtime="20210908 20:34:37.175"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:37.176" level="INFO">Clicking element '(//div[@class="ProductGridItem__Label-iQRkAY jLwkyu"]/parent::div/parent::div/parent::div)[1]'.</msg>
+<status status="PASS" starttime="20210908 20:34:37.175" endtime="20210908 20:34:38.801"/>
+</kw>
+<kw name="Add item into cart" library="CartDetails">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:38.801" endtime="20210908 20:34:43.191"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:43.193" level="INFO">Clicking element '//*[@class='Button__StyledButton-r30g8h-0 uwdlB AddToCartButton__AddToCartButtonElem-dtemKR bwuoky']'.</msg>
+<status status="PASS" starttime="20210908 20:34:43.192" endtime="20210908 20:34:44.451"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AddItemSuccessMessage}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:34:44.452" endtime="20210908 20:34:58.355"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:38.801" endtime="20210908 20:34:58.355"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${AddedItemToCart}</arg>
+<arg>${data-productID}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20210908 20:34:58.355" endtime="20210908 20:34:58.356"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>list items is ${AddedItemToCart}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210908 20:34:58.357" level="INFO">list items is ['Create List', '259286', '262249']</msg>
+<status status="PASS" starttime="20210908 20:34:58.357" endtime="20210908 20:34:58.357"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:36.722" endtime="20210908 20:34:58.358"/>
+</kw>
+<kw name="Checkout Cart" library="CartItems">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210908 20:34:58.360" level="INFO">Clicking element '//*[@id="btn-openMiniCart"]/img'.</msg>
+<status status="PASS" starttime="20210908 20:34:58.359" endtime="20210908 20:35:00.427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CartHeader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210908 20:35:00.427" endtime="20210908 20:35:01.619"/>
+</kw>
+<status status="PASS" starttime="20210908 20:34:58.358" endtime="20210908 20:35:01.619"/>
+</kw>
+<kw name="Finish TestCase" library="BaseTest" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210908 20:35:01.621" endtime="20210908 20:35:04.840"/>
+</kw>
+<status status="PASS" starttime="20210908 20:35:01.620" endtime="20210908 20:35:04.841"/>
+</kw>
+<status status="PASS" starttime="20210908 20:33:41.386" endtime="20210908 20:35:04.841"/>
+</test>
+<status status="PASS" starttime="20210908 20:33:41.039" endtime="20210908 20:35:04.845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SeleniumTest">SeleniumTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
